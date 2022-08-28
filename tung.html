@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="iu.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>nguyễn thanh hương.com</title>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+          <div class="circle" id="sc" style="--clr:#04fc43;"><i></i></div>
+          <div class="circle circle2" id="mn" style="--clr:#fee800;"><i></i></div>
+          <div class="circle circle3" id="hr" style="--clr:#ff2972;"><i></i></div>
+
+            <span style="--i:1;"><b>1</b></span>
+            <span style="--i:2;"><b>2</b></span>
+            <span style="--i:3;"><b>3</b></span>
+            <span style="--i:4;"><b>4</b></span>
+            <span style="--i:5;"><b>5</b></span>
+            <span style="--i:6;"><b>6</b></span>
+            <span style="--i:7;"><b>7</b></span>
+            <span style="--i:8;"><b>8</b></span>
+            <span style="--i:9;"><b>9</b></span>
+            <span style="--i:10;"><b>10</b></span>
+            <span style="--i:11;"><b>11</b></span>
+            <span style="--i:12;"><b>12</b></span>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="navigation">
+    <li class="active">
+       <a href="#">
+         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+         <span class="text">Home</span>
+       </a>
+    </li>
+    <li>
+       <a href="#">
+         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+         <span class="text">Profile</span>
+       </a>
+    </li>
+    <li>
+       <a href="#">
+         <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+         <span class="text">Mesages</span>
+       </a>
+    </li>
+    <li>
+       <a href="#">
+         <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+         <span class="text">Photo</span>
+       </a>
+    </li>
+    <li>
+       <a href="#">
+         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+         <span class="text">Settings</span>
+       </a>
+    </li>
+    </ul>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let list = document.querySelectorAll('.navigation li');
+    function activeLink() {
+        list.forEach((item) => 
+            item.classList.remove('active'));
+            this.classList.add('active');
+
+        }
+        list.forEach((item) => 
+        item.addEventListener('click', activeLink))
+
+    let hr= document.querySelector('#hr')
+    let mn= document.querySelector('#mn')
+    let sc= document.querySelector('#sc')
+
+
+    setInterval(()=> {
+    let day = new Date();
+    let hh=day.getHours() * 30;
+    let mm=day.getMinutes() * 6;
+    let ss=day.getSeconds() * 6;
+    hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`;
+    })
+
+    
+</script>
+</body>
+</html>
