@@ -17,10 +17,10 @@ body{
     /* position:fixed;
     left: -250px;
     top: 250px; */
-    margin-top: -28px;
+    margin-top: -32px;
     position: relative;
-    width: 540px;
-    height: 120px;
+    width: 450px;
+    height: 80px;
     box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
     10px 10px 70px rgba(0,0,0,0.25),
     inset 5px 5px 10px rgba(0,0,0,0.5),
@@ -145,8 +145,8 @@ body{
 }
 .clock{
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     background:#2f363e;
     border-radius: 50%;
     box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
@@ -200,7 +200,7 @@ body{
     background: var(--clr);
     opacity: 0.75;
     transform-origin:bottom;
-    transform: scaleY(0.65);
+    transform: scaleY(0.7);
 }
 .circle:nth-child(1) i{
     width: 2px;
@@ -214,8 +214,8 @@ body{
     z-index: 9;
 }
 .circle3{
-    width: 180px ;
-    height: 180px;
+    width: 170px ;
+    height: 170px;
     z-index: 8;
 }
 .circle::before{
